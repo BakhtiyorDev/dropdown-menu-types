@@ -1,0 +1,152 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  overflow: hidden !important;
+}
+
+a {
+  color: rgb(0, 0, 0);
+}
+
+i {
+  font-style: inherit;
+}
+
+.container {
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* loader start */
+
+.loader {
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: loader 3s forwards;
+}
+
+.loader__out {
+  position: relative;
+  top: 45px;
+  width: 116px;
+  height: 116px;
+  overflow: hidden;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+}
+
+.loader__in {
+  position: absolte;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 10px solid #000000;
+  border-top: 10px solid #fdfdfd;
+  border-bottom: 10px solid #ffffff;
+  animation: loading 3s linear infinite forwards;
+}
+
+.loader__img {
+  position: relative;
+  bottom: 61px;
+  width: 116px;
+  height: 99px;
+  object-fit: cover;
+  background: #ffffff;
+  border: 1px solid #00000093;
+  border-radius: 50%;
+}
+
+@keyframes loading {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader {
+  100% {
+    visibility: hidden;
+  }
+}
+
+/* loader end */
+
+.header {
+  background: url(../img/bg-img.jpg) center 75% / cover;
+  height: 100vh;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.header__logo {
+  font-size: 35px;
+  color: #fff;
+}
+
+.header__list {
+  display: flex;
+}
+
+.header__item {
+  position: relative;
+  padding: 10px 20px;
+  transition: 0.3s;
+}
+
+.header__item:hover {
+  background: #309e1b;
+  cursor: pointer;
+}
+
+.header__link {
+  font-size: 28px;
+  color: #ffffff;
+}
+
+.dropDown__list {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 5px 0;
+}
+
+.dropDown__item {
+  transition: 0.5s;
+  text-align: center;
+  padding: 10px;
+  background: #14a301;
+  display: none;
+  transform: rotateY(90deg);
+  border: 1px solid #ffffff48 !important;
+}
+
+.dropDown__item:hover {
+  background: #0d7200;
+}
+
+.dropDown__link {
+  color: #fff;
+  font-size: 20px;
+}
